@@ -4,7 +4,7 @@ import pyperclip
 passwords = {
 
 }
-letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-=~"
+letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-=~Gith"
 response = "y"
 
 while response == "y":
@@ -16,7 +16,7 @@ while response == "y":
         random_letters = ""
         for i in range(8):
             random_letters += random.choice(letters)
-        print(f"here is your password for {website}: ", random_letters)
+        print(f"Here is your password for {website}: ", random_letters)
         pyperclip.copy(random_letters)
         print("Your password has been copied to the clipboard")
         passwords[website] = random_letters
@@ -28,7 +28,10 @@ while response == "y":
             print(x, ": ", y)
         # asks user if they want to enter another password
         response = input("Enter another password? (y/n): ", )
-    else:
+    elif response == "n":
         break
+    else:
+        print("That isn't a valid input, try again")
+        response = input("Enter another password? (y/n): ", )
 
 
