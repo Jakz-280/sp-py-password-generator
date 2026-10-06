@@ -7,7 +7,7 @@ passwords = {
 letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-=~Gith"
 response = "y"
 
-while response == "y":
+while response != "n":
     if response == "y":
         # asks for website name
         website = input("What website is the password for? ", )
@@ -33,5 +33,3 @@ while response == "y":
     else:
         print("That isn't a valid input, try again")
         response = input("Enter another password? (y/n): ", )
-
-
